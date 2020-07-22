@@ -48,8 +48,7 @@ node {
 		        rc3 = bat returnStatus: true, script: "mkdir C:\\deploy-cmp\\${folderString}"
 		        correctstring = result[i].split('/').join('\\');
 		    	rc4 = bat returnStatus: true, script: "copy ${correctstring} C:\\deploy-cmp\\${folderString}"
-		    	rc5 = bat returnStatus: true, script: "copy ${correctstring}-meta.xml C:\\deploy-cmp\\${folderString}"
-			    
+		    	rc5 = bat returnStatus: true, script: "copy ${correctstring}-meta.xml C:\\deploy-cmp\\${folderString}"			    
 		    }
 		    
 //		    println '***'
@@ -68,8 +67,10 @@ node {
 			}
 			  
             printf rmsg
-            println('Hello from a Job DSL script!')
+            println('Deployment is Finished Successfully!!')
             println(rmsg)
+            rc5 = bat returnStatus: true, script: "rmdir C:\\deploy-cmp\\force-app"			    
+
         }
     }
 }
