@@ -6,7 +6,6 @@
 .sfdx/
 .localdevserver/
 
-Jenkinsfile
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
