@@ -64,7 +64,6 @@ node {
 			}else{
 //			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath ./force-app/main/default/"
 				
-			   rmsg2 = bat returnStdout: true, script: "\"${toolbelt}\" force:config:set --defaultusername=${HUB_ORG}"
 			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath C:/deploy-cmp/force-app/main/default/"
 			}
 			  
