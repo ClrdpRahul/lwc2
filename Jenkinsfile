@@ -71,8 +71,8 @@ node {
             printf rmsg
             println('Deployment is Finished Successfully!!')
             println(rmsg)
-            rc5 = bat returnStatus: true, script: "cd C:\\deploy-cmp"			    
-            rc6 = bat returnStatus: true, script: "rmdir /Q /S force-app"			    
+            rc5 = bat returnStatus: true, script: "cd C:/deploy-cmp"			    
+//            rc6 = bat returnStatus: true, script: "rmdir /Q /S force-app"			    
 
         }
     }
