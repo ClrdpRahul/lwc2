@@ -9,5 +9,6 @@ public with sharing class ContactController {
             SELECT FirstName, LastName, Email j
             FROM Contact WITH SECURITY_ENFORCED
        ];*/
+       //Adding additional Line
     }
 }
