@@ -81,7 +81,7 @@ node {
                 copyXML = bat returnStdout: true, script: "copy ..\\sfpowerkitDiff\\destructiveChanges.xml ..\\sfpowerkitDeploy\\"
                 mdapiDeploy = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -d ..\\sfpowerkitDeploy\\ -w 30 -u  lwc@user.com --loglevel trace"
                 cleanDestructiveXML = bat returnStatus: true, script: "cd ..\\sfpowerkitDeploy & del destructiveChanges.xml"			    
-            }catch(exception ex){
+            }catch(ex){
 
             }
         }
