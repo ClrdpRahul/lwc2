@@ -79,6 +79,6 @@ node {
             createXML = bat returnStdout: true, script: "\"${toolbelt}\" sfpowerkit:project:diff -r HEAD~1 -d  /sfpowerkitDiff -x --loglevel trace"
             copyXML = bat returnStdout: true, script: "cp ../sfpowerkitDiff/destructiveChanges.xml ../sfpowerkitDeploy/"
             mdapiDeploy = bat returnStdout: true, script: "\"${toolbelt}\" force:mdapi:deploy -d ../sfpowerkitDeploy/ -w 30 -u  lwc@user.com --loglevel trace"
-        }
+        } 
     }
 }
