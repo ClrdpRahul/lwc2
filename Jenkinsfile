@@ -65,6 +65,9 @@ node {
 //			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath ./force-app/main/default/"
 				
 			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy -u ${HUB_ORG} --sourcepath C:\\deploy-cmp\\force-app\\main\\default\\"
+               rmsg2 = bat returnStdout: true, script: "\"${toolbelt}\" force:data:record:create -u ${HUB_ORG} -s Deployment_Status__c -v \"Description__c='Deployed Successfully.'\""
+               def commitDetail = bat (returnStdout: true, script: "git log --oneline -n 1").trim()
+               println("commitDetail-"+commitDetail+"--------");
 //			   rmsg = bat returnStdout: true, script: "\"${toolbelt}\" force:source:deploy --sourcepath C:/deploy-cmp/force-app/main/default/"
 			}
 			  
